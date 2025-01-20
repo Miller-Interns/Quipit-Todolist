@@ -1,0 +1,42 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a {
+  background-color: hsl(160, 100%, 37%);
+  text-decoration: none;
+  border-radius: 2rem;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+    transition: background-color 0.3s;
+    color: rgb(157, 200, 197);
+  }
+}
+
+@media (min-width: 100px) {
+  body {
+    display: flex;
+    place-items: left;
+  }
+
+  #app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+  }
+}
