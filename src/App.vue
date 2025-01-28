@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useTodoStore } from '@/stores/todo-store'
-import SuccessMessage from '@/components/messages/success-message.vue'
+  import { onMounted } from 'vue';
+  import { useTodoStore } from '@/stores/todo-store';
+  import SuccessMessage from '@/components/messages/success-message.vue';
 
-const store = useTodoStore()
+  const todoStore = useTodoStore();
 
-onMounted(() => {
-    store.loadFromLocalStorage()
-})
+  onMounted(() => {
+    todoStore.loadFromLocalStorage();
+  });
 </script>
 
 <template>
-    <SuccessMessage />
-    <router-view />
+  <SuccessMessage />
+  <router-view />
 </template>
