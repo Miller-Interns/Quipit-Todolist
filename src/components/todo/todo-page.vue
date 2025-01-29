@@ -5,6 +5,7 @@
   import { useConfirmModal } from '@/composables/use-warning';
   import { useTodo } from '@/composables/use-todo';
   import WarningIcon from '../icons/warning-icon.vue';
+  import { ROUTENAMES } from '@/enums/RouteNames';
 
   const { categories, expandedCategory, toggleCategory } = useTodo();
 
@@ -89,11 +90,23 @@
         </div>
       </div>
     </transition>
+    <div>
+      <RouterLink :to="{ name: ROUTENAMES.Home }"> Go back </RouterLink>
+    </div>
   </div>
 </template>
 
 <style scoped>
   .main-container {
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .page-container {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     max-width: 900px;
     position: relative;

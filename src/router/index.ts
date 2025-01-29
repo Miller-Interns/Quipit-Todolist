@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { ROUTENAMES } from '@/enums/RouteNames';
 import HomePage from '../views/home-view.vue';
 import TodoPage from '../views/todo-view.vue';
 
@@ -7,12 +8,12 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: ROUTENAMES.Home,
       component: HomePage,
     },
     {
       path: '/todo',
-      name: 'todo',
+      name: ROUTENAMES.TodoPage,
       component: TodoPage,
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
